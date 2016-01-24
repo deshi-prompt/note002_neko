@@ -1,0 +1,101 @@
+\documentclass[a4paper,11pt,oneside,openany]{jsbook}
+%
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{ascmac}
+\usepackage{makeidx}
+\usepackage{hyperref}
+\usepackage{layout}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{here}
+\usepackage{url}
+%
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+%
+%図の前のコロンを削除%%%%%%%%
+\makeatletter
+\long\def\@makecaption#1#2{%
+\vskip\abovecaptionskip
+\iftdir\sbox\@tempboxa{#1\hskip1zw#2}%
+\else\sbox\@tempboxa{#1 #2}%
+\fi
+\ifdim \wd\@tempboxa >\hsize
+\iftdir #1\hskip1zw#2\relax\par
+\else #1 #2\relax\par\fi
+\else
+\global \@minipagefalse
+\hbox to\hsize{\hfil\box\@tempboxa\hfil}%
+\fi
+\vskip\belowcaptionskip}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\makeindex
+%レイアウト設定%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\cfoot{\thepage}
+\renewcommand{\footrulewidth}{0.4pt}
+%
+\setlength{\textwidth}{389pt}
+\setlength{\headwidth}{389pt}
+\setlength{\textheight}{35.5\baselineskip}
+\setlength{\footskip}{35pt}
+\addtolength{\textheight}{\topskip}
+\setlength{\voffset}{-0.65in}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{{\Huge \textbf{ネコろびながらできる\\ロボット開発}}\\ {\small Ver. 0.1.0}}
+\author{でし・ぷろんぷと\\ \texttt{http://deshi-prompt.github.io/}}
+\date{\today}
+\begin{document}
+
+\parindent=0pt % 字下げしない
+
+%------------------------------------------------------------------
+\thispagestyle{empty}
+
+\frontmatter % 序文の開始
+\tableofcontents %目次作成
+
+%------------------------------------------------------------------
+\mainmatter % 本文の開始
+
+\chapter{はじめに}
+\thispagestyle{fancy}
+\input{./src/01.tex}
+
+\chapter{概念設計}
+\thispagestyle{fancy}
+\input{./src/02.tex}
+
+\chapter{基本設計}
+\thispagestyle{fancy}
+\input{./src/03.tex}
+
+\chapter{詳細設計}
+\thispagestyle{fancy}
+\input{./src/04.tex}
+
+\begin{thebibliography}{20}
+\bibitem{kawasaki_public_rule}かわさきロボット競技大会 規則 \\ \url{http://www.kawasaki-net.ne.jp/robo/22th/battle/rule.html}
+\bibitem{kawasaki_public_HP}かわさきロボット競技大会 公式HP \\ \url{http://www.kawasaki-net.ne.jp/robo/}
+\bibitem{kawarobo_dojo}かわさきロボット競技大会 かわロボ道場 \\ \url{http://www.kawasaki-net.ne.jp/robo/about_kawarobo/dojo.html}
+\bibitem{creo_elements}PTC Creo Elements/Direct Modeling　\\ \url{http://ja.ptc.com/product/creo/elements/direct-modeling}
+\bibitem{tamiya_380k}タミヤ ギアドモータ380K　\\ \url{http://www.tamiya.com/japan/robocon/robo_parts/g_motor/g_motor_zumen.htm}
+\bibitem{replicator2x}Makerbot Replicator 2X　\\ \url{http://makerbot.co.jp/contents/replicator2x.html}
+
+
+\end{thebibliography}
+
+%------------------------------------------------------------------
+%\appendix % 付録
+
+%------------------------------------------------------------------
+%\backmatter % 後書きの開始
+
+%\newpage
+%\printindex
+%
+%
+\end{document}
