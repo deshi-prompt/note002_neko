@@ -1,4 +1,18 @@
 # deshi-pro note No002
 
+```bash
+> cd note002_neko
+> make all
+> evince book.pdf
+```
+
+# creating html
+
+```bash
+> cd note002_neko
+> make html
+> firefox index.html
+```
+
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">deshi-pro note No.002</span> は <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際 ライセンスの下で提供されています。</a>
 
